@@ -1,0 +1,38 @@
+@use '../abstract/functionality' as *;
+
+.location-info-cont{
+    
+    @include respond-to(medium){
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        // grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+        justify-content: space-evenly;
+        gap:3rem;
+        text-align: left;
+        padding: 1rem clamp(0rem, -1.646rem + 4.051vw, 2rem);
+        & > * {
+            // flex-grow: 1;
+            flex-basis: 100%;
+        }
+        
+    }
+    @include respond-to('big'){
+        width: 80%;
+    }
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .wrapper {
+        & > * {
+        }
+        
+            
+        
+        display: flex;
+        flex-direction: column;
+        padding: .65rem 0;
+    }
+    
+}

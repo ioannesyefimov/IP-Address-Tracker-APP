@@ -1,0 +1,9 @@
+@use '../abstract/functionality' as*;
+#app {
+    @include respond-to(medium){
+        // background-size: 100% clamp(20rem, 15.886rem + 10.127vw, 25rem);
+    }
+    background-image:url('/src/assets/pattern-bg.png') ;
+    background-size: 100% 20rem;
+    background-repeat: no-repeat;
+}

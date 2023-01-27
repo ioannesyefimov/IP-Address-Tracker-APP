@@ -1,0 +1,78 @@
+@use '../abstract/functionality' as *;
+@use '../abstract/variables' as*;
+.header {
+    @include respond-to(medium){
+        padding: 2rem;
+    }
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 1;
+    gap:1.5rem;
+    padding: 1.5rem 2rem; 
+    .wrapper-header {
+        @include respond-to(medium){
+            width: 50%;
+            margin: 0 auto;
+        }
+        display: grid;
+        
+        gap:2rem;
+        #search-ip{
+           &[is-error=true]{
+                flex-wrap: wrap;
+                gap:1.5rem 0;
+           }
+            display: flex;
+            border-radius: 13px;
+            overflow: hidden;
+            // perspective: 1px;
+            & > * {
+                flex-grow: 1;
+            }
+            .search-input {
+                @include respond-to(medium){
+                    flex-basis:80% ;
+                }
+                color: $clr-v-d-gray;
+                font-weight: weights(regular);
+                padding: .9rem ;
+                flex-basis: 75%;
+    
+            }
+            .search-btn {
+                @include respond-to(medium){
+                    filter: drop-shadow(0px 0px 51px $clr-white);
+                }
+                border: none;
+                background-color: black;
+
+                img {
+                    margin: 0 auto;
+                    filter: drop-shadow(0 0px 4px  $clr-white)
+                }
+            }
+        }
+    }
+    .error {
+        margin-top: 2rem;
+        display: flex;
+        gap:1rem;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        color: red;
+        font-size: 1.5rem;
+        font-weight: weights(bold);
+        filter: drop-shadow(0px 0px 5px  red);
+        
+        .error-img {
+        max-width: 3vw;
+        }
+    }
+   
+
+}

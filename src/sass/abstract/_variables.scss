@@ -1,0 +1,15 @@
+$clr-v-d-gray: hsl(0, 0%, 17%);
+$clr-d-gray: hsl(0, 0%, 59%);
+$clr-white: hsl(0,0%,100%);
+
+$font-weights: (
+    'light': 400,
+    'regular': 500,
+    'bold': 700,
+);
+
+$breakpoints: (
+    'medium': (min-width:650px),
+    'big': (min-width:1000px),
+    'xxl': (min-width: 1200px),
+)

@@ -1,0 +1,59 @@
+@use '../abstract/variables' as *;
+@use '../abstract/functionality' as * ;
+.location-info-cont{
+   
+    background-color: $clr-white;
+    border-radius: 12px;    
+    padding: 1rem;
+    
+    .wrapper {
+        gap:.5rem;
+        @include respond-to('medium'){
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                height: 65%;
+                width: 1px;
+                right: min(-1vw, 0.5rem);
+                top:15%;
+                background-color: $clr-d-gray;
+                opacity: .5;
+            }
+            p, h3 {
+                max-width: 12ch;
+            };
+            }
+            p {
+                color: $clr-d-gray;
+                text-transform: uppercase;
+            }
+            .flex-wrapper {
+                span, h3{
+                    color: $clr-v-d-gray;
+                     font-weight: weights(bold);
+
+                }
+                
+            }
+        
+    }
+   
+    .wrapper:last-child{
+        @include respond-to(medium){
+            &::after{
+                display: none;
+            }
+        }
+    }
+    .flex-wrapper{
+        @include respond-to(medium){
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        justify-content: center;
+        align-items: flex-start;
+        display: flex;
+        gap:.5rem;
+    }
+}
