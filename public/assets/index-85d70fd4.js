@@ -5,7 +5,7 @@
        <h1>IP Address Tracker</h1>
         <form method="post" id="search-ip">
           <input type="text" id="search-input" class="search-input" placeholder='Search for any IP address or domain'>
-          <button type='submit' class='search-btn' id="submit-btn"><img src="src/assets/icon-arrow.svg" alt='arrow-svg'</button>
+          <button type='submit' class='search-btn' id="submit-btn"><img src="./icon-arrow.svg" alt='arrow-svg'</button>
         </form>
       </div>
 
